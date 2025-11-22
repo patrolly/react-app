@@ -1,7 +1,20 @@
-
+import { useContext, useEffect } from "react";
+import { ThemeContext } from "../../context/ThemeContext";
 
 function Dashboard() {
-  return <h1>Dashboard</h1>;
+  const { theme, toggleTheme } = useContext(ThemeContext);
+
+  useEffect(() => {
+    console.log(theme);
+  }, [theme]);
+
+  return (
+    <main className={theme}>
+      <h1>Dashboard</h1>
+      <span>{theme}</span>
+      <button onClick={toggleTheme}>ZMIEN MOTYW</button>
+   </main>  
+  );
 }
 
 export default Dashboard;

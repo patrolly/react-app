@@ -7,3 +7,19 @@ body{
   flex-wrap: wrap;
   gap: 1rem;
 }
+
+#root{
+  height: 100%;
+}
+
+.dark{
+  background-color: rgba(144, 144, 144);
+  color: red;
+  height: 100%;
+}
+.light{
+  background-color: rgb(243, 244, 227);
+  color: black;
+  height: 100%;
+
+}
