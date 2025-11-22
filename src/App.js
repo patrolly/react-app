@@ -1,17 +1,21 @@
-import { BrowserRouter, Routes, Route } from 'react-router';
-import './App.css';
-import Login from "./pages/Login/Login";
+import { BrowserRouter, Routes, Route } from "react-router";
+import "./App.css";
+import Login from "./pages/login/Login";
 import Posts from "./pages/Posts";
+import PostDetail from "./pages/PostDetail/PostDetail";
+import Nav from "./components/Nav/Nav";
+import Dashboard from "./pages/Dashboard/Dashboard";
 function App() {
-
-  
   return (
     <BrowserRouter>
-  <Routes>
-    <Route path="/" element={<Posts/>}></Route>
-    <Route path="/posts" element={<Posts/>}></Route>
-    <Route path="/login" element={<Login/>}></Route>
-    </Routes>
+      <Nav></Nav>
+      <Routes>
+        <Route path="/" element={<Posts />}></Route>
+        <Route path="/posts" element={<Posts />}></Route>
+        <Route path="/post/:id" element={<PostDetail />}></Route>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/dashboard" element={<Dashboard />}></Route>
+      </Routes>
     </BrowserRouter>
   );
 }
